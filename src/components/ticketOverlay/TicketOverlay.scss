@@ -1,0 +1,31 @@
+@import '../../styles/colors';
+@import '../../styles/sizes';
+.getTicketOverlay{
+    position: fixed !important;
+    bottom: 32px;
+    right: 32px;
+    border-radius: 50%;
+    
+    width: 64px;
+    height: 64px;
+    z-index: 999;
+    background: $orange-2;
+    filter: drop-shadow(2px 2px 0.5rem crimson);
+    cursor: pointer;
+    &:hover{
+        
+        background: $orange-1;
+    }
+    i{
+        color:$white-1;
+        // font-size:48px;
+        top: 50%;
+        left: 50%;
+        color: rgb(255, 255, 255);
+        position: absolute;
+        font-size: $h2-fs;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        transition: all 0.2s ease-out 0s;
+    }
+  }

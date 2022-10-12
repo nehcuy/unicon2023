@@ -1,0 +1,98 @@
+@import '../../styles/colors';
+@import '../../styles/sizes';
+
+.venue,.contactInfos{
+    position: relative;
+    z-index: 1;
+}
+#contactPage{
+    background: $gray-1;
+    height: 100%;
+    // text-align: center;
+    overflow-y: scroll;
+    .footerWrap{
+        height: 50%;
+        position: relative;
+    }
+    .venue{
+        // .header{
+        //     font-size: $h1-5-fs;
+        //     font-family: ;
+        // }
+        .title{
+            margin-top: -16px;
+            margin-bottom: 32px;
+        }
+    }
+    .directions{
+        
+        img{
+            // height: 50%;
+            display: block;   // must be block 
+            width: 75%;
+            margin: auto;
+            cursor: pointer;
+            border-radius: 8px;
+            box-shadow: 4px 4px 4px #333;
+        }
+    }
+    .contactInfos{
+
+        color: $white-1;
+        margin: 32px;
+        &::before{
+            content:"";
+            border: 1px solid $orange-2;
+            width: 80%;
+            display: block;
+            margin:auto;
+        }
+        .contactRow{
+            // height: 72px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 16px 0px;
+            .contactInfo{
+                height: 100%;
+                // display:flex;
+                // justify-content: center;
+                width:40%;
+                // background: $orange-1;
+                margin: 0px 8px;
+                border-radius: 8px;
+                padding: 8px;
+                & > div{
+                    display: inline-block;
+                    vertical-align: top;
+                    margin: 0px 8px;
+                }
+            }
+            .contactIcon{
+                font-size: 36px;
+                i{
+                    margin-top: 8px;
+                }
+            }
+            .contactText{
+                // text-align: left;
+              
+                .header{
+                    font-size: $h2-fs;
+                    margin-bottom: 16px;
+                }
+                a{
+                    background: none;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+
+    &.mobile{
+        .contactInfo{
+            width: 80% !important;
+        }
+    }
+}

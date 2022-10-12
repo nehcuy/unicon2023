@@ -1,0 +1,358 @@
+@import "../../styles/colors.scss";
+@import "../../styles/sizes.scss";
+
+$primaryColor: $orange-1;
+$secondaryColor: $beige-1;
+$thirdColor: $maroon;
+$lineColor: $white-1; //#D6D6D6;
+
+.timelineContainer {
+    // height: 100%;
+    position: relative;
+    width: 100%;
+}
+
+.twae-wrapper {
+    &::before {
+        background-color: $lineColor;
+    }
+
+    &::after {
+        background-color: $lineColor;
+    }
+
+    .twae-line::before {
+        background-color: $lineColor;
+    }
+
+    .twae-icon {
+        background-color: $primaryColor;
+        color: $secondaryColor;
+    }
+
+    // .twae-icon {
+    //     background-color: #FBFEFF;
+    //     color: #2DD0DB;
+    // }
+    .twae-timeline-centered {
+        .twae-icon {
+            border: 4px solid $lineColor;
+        }
+    }
+
+    .twae-data-container {
+        background-color: $secondaryColor;
+
+        &::after {
+            border-right-color: $primaryColor;
+        }
+
+        span.twae-title {
+            color: $primaryColor;
+        }
+    }
+
+    .twae-right-aligned .twae-data-container {
+        border-left: 2px solid $primaryColor;
+        border-left-color: $primaryColor
+    }
+
+    span.twae-label {
+        font-size: 20px;
+        font-weight: 600;
+        color: $primaryColor;
+    }
+
+    span.twae-label {
+        color: #FFFFFF;
+    }
+
+    span.twae-extra-label {
+        font-size: 15px;
+        font-weight: normal;
+        color: #7A7A7A;
+    }
+
+    .twae-description {
+        font-size: 16px;
+        font-weight: normal;
+        color: #333333;
+    }
+
+    span.twae-title {
+        font-size: 20px;
+        font-weight: 600;
+    }
+}
+
+.twae-vertical::after,
+.twae-vertical::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    border-radius: 50%;
+    position: absolute;
+    left: calc(50% - 12px);
+    z-index: 9;
+}
+
+.twae-vertical {
+    &::before {
+        top: -10px;
+    }
+
+    &::after {
+        bottom: 20px;
+    }
+
+    &::after,
+    &::before {
+        content: "";
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        border-radius: 50%;
+        position: absolute;
+        left: calc(50% - 12px);
+        z-index: 9;
+    }
+}
+
+.twae-timeline-centered {
+    position: relative;
+    margin-bottom: 30px;
+    padding-top: 20px;
+
+    &::after,
+    &::before {
+        content: " ";
+        display: table;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 4px;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        margin-left: -4px;
+    }
+
+    &::after {
+        clear: both;
+    }
+
+    .twae-timeline-entry {
+        position: relative;
+        width: 50%;
+        float: right;
+        margin-bottom: 70px;
+        clear: both;
+
+        &.twae-left-aligned {
+            float: left;
+
+            .twae-timeline-entry-inner {
+                margin-left: 0;
+                margin-right: -22px;
+
+                .twae-icon {
+                    float: right;
+                }
+
+                .twae-label-extra-label {
+                    left: auto;
+                    right: -100%;
+                    text-align: left;
+                }
+
+                .twae-data-container {
+                    margin-left: 0;
+                    margin-right: 70px;
+                    border-right: 2px solid $primaryColor;
+
+                    &::after {
+                        left: auto;
+                        right: 0;
+                        margin-left: 0;
+                        margin-right: -9px;
+                        -moz-transform: rotate(180deg);
+                        -o-transform: rotate(180deg);
+                        -webkit-transform: rotate(180deg);
+                        -ms-transform: rotate(180deg);
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+        }
+
+    }
+
+    &.twae-timeline-sm .twae-timeline-entry {
+        margin-bottom: 20px !important;
+    }
+
+    .twae-timeline-entry .twae-timeline-entry-inner {
+        position: relative;
+        margin-left: -27px;
+
+        &::after {
+            clear: both;
+        }
+
+        .twae-label-extra-label {
+            position: absolute;
+            left: -100%;
+            width: 100%;
+            text-align: right;
+            padding: 10px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+
+            &>span {
+                display: block;
+            }
+        }
+
+        .twae-data-container {
+            position: relative;
+            padding: 1.7em;
+            margin-left: 70px;
+            -webkit-background-clip: padding-box;
+            -moz-background-clip: padding;
+            background-clip: padding-box;
+            -webkit-border-radius: 6px;
+            -moz-border-radius: 6px;
+            border-radius: 6px;
+            box-shadow: 0 2px 8px -2px rgba(0, 0, 0, .3);
+
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 9px 9px 9px 0;
+                left: 0;
+                top: 14px;
+                margin-left: -9px;
+                color: rgba(0, 0, 0, 0);
+            }
+
+            .twae-title {
+                margin-bottom: 10px;
+                font-weight: 700;
+                display: inline-block;
+                width: 100%;
+            }
+        }
+
+        .twae-label-extra-label {
+            &>span {
+                display: block;
+            }
+
+            &>span:last-child {
+                margin-top: 5px;
+            }
+        }
+
+        .twae-icon {
+            display: block;
+            width: 48px;
+            height: 48px;
+            -webkit-background-clip: padding-box;
+            -moz-background-clip: padding-box;
+            background-clip: padding-box;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 0;
+            font-size: 0;
+            float: left;
+            padding: 0;
+        }
+    }
+
+    &.twae-timeline-sm .twae-timeline-entry .twae-timeline-entry-inner .twae-data-container {
+        padding: .85em;
+    }
+}
+
+.twae-timeline-centered .twae-timeline-entry::after,
+.twae-timeline-centered .twae-timeline-entry::before {
+    content: " ";
+    display: table;
+}
+
+@media only screen and (max-width: 767px) {
+    .twae-timeline-centered:before {
+        left: 22px;
+    }
+
+}
+
+@media only screen and (max-width: 767px) {
+
+    .twae-vertical:after,
+    .twae-vertical:before {
+        left: 10px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .twae-timeline-centered .twae-timeline-entry {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .twae-timeline-centered .twae-timeline-entry .twae-timeline-entry-inner {
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .twae-timeline-centered .twae-timeline-entry .twae-timeline-entry-inner .twae-label-extra-label {
+        position: relative;
+        left: 0;
+        text-align: left;
+        display: inline-block;
+        width: 100%;
+        padding-left: 54px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .twae-timeline-centered .twae-timeline-entry .twae-timeline-entry-inner .twae-icon {
+        width: 40px;
+        height: 40px;
+        line-height: 28px;
+        font-size: 18px !important;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+
+    .twae-timeline-centered .twae-timeline-entry .twae-timeline-entry-inner .twae-data-container,
+    .twae-timeline-centered .twae-timeline-entry.twae-left-aligned .twae-timeline-entry-inner .twae-data-container {
+        margin-left: 54px;
+        margin-right: 0;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .twae-timeline-centered .twae-timeline-entry .twae-timeline-entry-inner .twae-data-container:after {
+        top: 10px;
+    }
+}
+
+.mobile {
+    .infoLayer {
+        padding: 0px;
+    }
+}

@@ -1,0 +1,48 @@
+@import '../../styles/colors';
+
+$h0-5-fs: 96px;
+$h1-fs: 64px;
+$h1-5-fs: 40px;
+$h2-fs: 24px;
+$n-plus-fs: 18px;
+$normal-fs: 14px;
+
+.image-card{
+    width: 100%;
+    height:100%;
+    color:$white-1;
+    display: block;
+    background-size: cover;
+    border-radius: 12px;
+    position: relative;
+    margin: 16px;
+    div{
+        display: block;
+        
+    }
+
+    .image-contentWrap{
+        margin: 16px;
+        position: absolute;
+        bottom:0;
+        z-index: 69;
+
+        .info{
+            line-height: 24px;
+            // overflow-y: auto;
+            // color:$orange-2;
+        }
+    }
+    .image-title{
+        text-align: left;
+        font-size: $h2-fs;
+        font-family: 'RaidenShogunTit';
+        margin-bottom: 8px;
+        color: $orange-1;
+        &::after{
+            content: '';
+            display: block;
+            border-bottom: 2px solid $orange-1;
+        }
+    }
+}

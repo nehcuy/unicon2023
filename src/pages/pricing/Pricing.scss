@@ -1,0 +1,140 @@
+@import '../../styles/colors';
+@import '../../styles/sizes';
+
+
+#pricingPage{
+    background: $gray-1;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: relative;
+    div{
+        position: relative;
+    }
+    .footerWrap{
+        // height: 320px;
+        height: 50%;   
+        position: relative;
+    }
+}
+.pricing{
+    text-align: center;
+    position: relative;
+    color: $maroon;
+    height: 100%;
+    .title, .subTitle, .header{
+        margin-bottom: 16px;;
+        font-weight: 700;
+    }
+    .subTitle{
+        color: $white-1;
+    }
+    .benefits, .ticket{
+        background: $orange-2;
+        border-radius: 16px;
+        padding: 32px;
+    }
+    .ticket{
+        width: 360px;
+    }
+    .benefits{
+        width: 50%;
+        margin: auto;
+        .header{
+            font-size: $h1-5-fs;
+        }
+    }
+    &.mobile{
+        .benefits{
+            width: 80%;
+            padding: 24px;
+            
+        }
+        #tickets{
+            flex-direction: column;
+            width: 80%;
+            margin:8px auto;
+            & > div{
+                margin: 16px;
+                width: 100%;
+                
+            }
+        }
+        #booths{
+            padding: 16px;
+        }
+    }
+}
+#tickets{
+    margin: 64px 16px;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+.ticket{
+    padding: 64px;
+    border-radius: 16px;
+    .ticketDetails{
+        font-size: $h1-5-fs;
+        margin-bottom: 16px;
+    }
+    
+}
+.listItem{
+    padding: 8px;
+    text-align: left;
+    div{
+        display: inline;
+    }
+    .tick{
+        font-size: 24px;
+        
+    }
+}
+
+.norm-text{
+    font-size: $n-plus-fs;
+}
+.link{
+    font-size: $n-plus-fs;
+    color: $white-1;
+    background: $orange-1;
+    border-radius: 8px;
+    cursor:pointer;
+    width: 55%;
+    margin: auto;
+    padding: 8px 0px ; 
+}
+
+#booths{
+    margin-top: 64px;
+    padding: 64px;
+    height: 50%;
+    width: 70%;
+    margin: auto;
+    border-radius: 16px;
+    background: $orange-2;
+    .header{
+        font-size: $h2-fs;
+    }
+}
+
+.buyNow{
+    // display:flex;
+    text-align: center;
+    .title{
+        margin-bottom: 32px;
+        color: $orange-1;
+    }
+    .norm-text{
+        color: $orange-2;
+        padding: 8px;
+        a{
+            color: $techie-aqua;
+        }
+    }
+}

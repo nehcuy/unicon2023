@@ -1,0 +1,85 @@
+@import '../../../styles/colors';
+@import '../../../styles/sizes';
+.credits{
+    // display: flex;
+    // justify-content: center;
+    width: 90%;
+    margin:auto;
+}
+.title{
+    font-size: $h1-fs - 8px;
+    font-family: "TwitchyTv";
+    text-align: center;
+    color: $orange-1;
+}
+.subtitle{
+    margin: 16px;
+    font-size: $h1-2-5-fs;
+    color: $beige-1;
+    text-align: center;
+}
+
+
+.credit_wrap{
+    display: flex;
+    margin-top: 44px;//88px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.imgContainer{
+    display: flex;
+    margin-top: 32px;
+    align-items: center;
+    justify-content: center;
+    max-width: 80%;//900px;
+    flex-wrap: wrap;
+    .imgWrap{
+        // margin: 8px 8px;
+        padding: 4px;
+        
+        // &.M{
+        flex-grow: 0;
+        max-width: 50%;
+        flex-basis: 50%;
+        // }
+        @media screen and (min-width: 720px){
+            &.S{
+                flex-grow: 0;
+                max-width: 25%;
+                flex-basis: 25%;
+            }
+    
+            &.XS{
+                flex-grow: 0;
+                max-width: 12.5%;
+                flex-basis: 12.5%;
+            }
+        }
+        div{
+            margin: 4px;
+            padding: 8px;
+            border-radius: 8px;
+            width: 100%;
+            a{
+                // margin: 8px;
+                position:relative;
+                height: 100%;
+            }
+        }
+        
+        img{
+            width:100%
+        }
+    }
+}
+.mobile{
+    .credit_wrap{
+        margin-top: 24px;
+    }
+    .imgContainer {
+        max-width: 90%;
+        
+        margin-top: 8px;
+    }
+}

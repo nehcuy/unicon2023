@@ -1,0 +1,31 @@
+/* https://stackoverflow.com/questions/41676054/how-to-add-fonts-to-create-react-app-based-projects */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
+html, body,#root {
+    font-family: 'Rubik', sans-serif ,system-ui;
+    height: 100%;
+    width: 100%;
+    margin:0;
+    padding:0;
+    /* overflow: hidden; */
+    /* touch-action: pan-up; */
+}
+
+body{
+  position: fixed;
+}
+
+/* * { outline: 1px red solid !important; visibility: visible !important } */
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}

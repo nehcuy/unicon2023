@@ -1,0 +1,1 @@
+export let day1Date =  new Date("Jan 15, 2022 00:00:00");
