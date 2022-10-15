@@ -28,7 +28,7 @@ import { rgba } from "@react-spring/shared";
 export default function Home({ win_width, win_height, is_mobile }) {
   console.log("Home");
   console.log(`${win_width} ${win_height} ${is_mobile}`);
-  const deadline = new Date("Jan 15, 2022 00:00:00");
+  const deadline = new Date("Jan 27, 2023 00:00:00");
   // const starLayer = useRef(null);
   const [curScroll, setCurScroll] = useState(0);
   const [bkgroundPos, setBkgroundPos] = useState("translate3d(0px, 0, 3em)");
