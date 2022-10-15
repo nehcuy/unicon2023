@@ -28,7 +28,7 @@ import { rgba } from "@react-spring/shared";
 export default function Home({ win_width, win_height, is_mobile }) {
   console.log("Home");
   console.log(`${win_width} ${win_height} ${is_mobile}`);
-  const deadline = new Date("Jan 15, 2022 00:00:00");
+  const deadline = new Date("Jan 27, 2023 00:00:00");
   // const starLayer = useRef(null);
   const [curScroll, setCurScroll] = useState(0);
   const [bkgroundPos, setBkgroundPos] = useState("translate3d(0px, 0, 3em)");
@@ -92,7 +92,7 @@ export default function Home({ win_width, win_height, is_mobile }) {
     let m = Math.floor(left / 60);
     left -= m * 60;
     let s = Math.floor(left);
-    // console.log(`${d} , ${h} , ${m} , ${s}`);
+    console.log(`${d} , ${h} , ${m} , ${s}`);
     return (
       <div className="countdownWrap">
         <div className="countdown">
@@ -105,7 +105,7 @@ export default function Home({ win_width, win_height, is_mobile }) {
             <div className="labels">Hours</div>
           </div>
           <div className="comp mins">
-            <div className="dhm">{h}</div>
+            <div className="dhm">{m}</div>
             <div className="labels">Minutes</div>
           </div>
           <div className="comp secs">
