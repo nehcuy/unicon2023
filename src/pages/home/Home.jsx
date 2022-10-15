@@ -120,7 +120,7 @@ export default function Home({ win_width, win_height, is_mobile }) {
               <div className="labels">Hours</div>
             </div>
             <div className="comp mins">
-              <div className="dhm">{h}</div>
+              <div className="dhm">{m}</div>
               <div className="labels">Minutes</div>
             </div>
             <div className="comp secs">
