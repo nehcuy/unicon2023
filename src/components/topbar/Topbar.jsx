@@ -73,6 +73,9 @@ export default function Topbar({ is_mobile }) {
         <Link className="topbarLink" to="/tigerlaunch">
           TigerLaunch
         </Link>
+        <Link className="topbarLink" to="/startup-booth">
+          Startup Booth
+        </Link>
         <Link className="topbarLink" to="/pricing">
           Pricing
         </Link>

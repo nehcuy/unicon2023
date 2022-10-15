@@ -10,6 +10,7 @@ import TigerLaunchPage from "./pages/tigerlaunch/Tigerlaunch";
 import PrivacyPage from "./pages/privacy/PrivacyPage";
 import TermsOfUsePage from "./pages/terms-of-use/TermsOfUse";
 import TestShootStars from "./pages/test/testShootingStars/TestShootStars";
+import StartupBooth from "./pages/startup-booth/StartupBooth";
 import "./App.scss";
 import {
   BrowserRouter as Router,
@@ -87,7 +88,9 @@ function App() {
         <Route path="/terms">
           <TermsOfUsePage win_width = {width} win_height = {height}  is_mobile={isMobile} />
         </Route>
-        
+        <Route path="/startup-booth">
+          <StartupBooth win_width = {width} win_height = {height}  is_mobile={isMobile} />
+        </Route>
         <Route path = "/TestShootingStars">
           <TestShootStars />
         </Route>

@@ -68,6 +68,16 @@
             color: $beige-1;
         }
     }
+    
+    .eventBegin {
+        color: $techie-aqua;
+        font-size: $h2-fs;
+        font-family: 'RaidenShogunTit';
+
+        &.dates {
+          color: $beige-1;
+        }
+    }
 
     .subText {
         color: $beige-1;
@@ -95,6 +105,13 @@
         color: $orange-1;
         font-size: $h1-5-fs;
         font-family: 'RaidenShogunTit';
+    }
+    .eventBegin {
+        margin: auto;
+        color: $orange-1;
+        font-size: $h1-5-fs;
+        font-family: 'RaidenShogunTit';
+        text-align: center;
     }
     // @media screen and (max-width: 1600px) {
         
