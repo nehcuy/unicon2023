@@ -52,12 +52,12 @@ export default function Home({ win_width, win_height, is_mobile }) {
   const FrontPanel = () => {
     return (
       <div className={`frontPanel ${is_mobile ? "center" : ""}`}>
-        <div className="title">UNICON 2022</div>
+        <div className="title">UNICON 2023</div>
         <div className="subTitle">
           Southeast Asia's Largest & Craziest Student-Led Entrepreneurship &
           Tech Conference!
         </div>
-        <div className="subTitle dates">15-16 January</div>
+        <div className="subTitle dates">27-28 January 2023</div>
         <div className="subText">powered by NES</div>
         <div
           className="button"
@@ -83,40 +83,56 @@ export default function Home({ win_width, win_height, is_mobile }) {
 
       return () => clearTimeout(timer);
     });
-    let hourDivider = 60 * 60;
-    let dayDivider = hourDivider * 24;
-    let d = Math.floor(countdown / dayDivider);
-    let left = countdown - d * dayDivider;
-    let h = Math.floor(left / hourDivider);
-    left -= h * hourDivider;
-    let m = Math.floor(left / 60);
-    left -= m * 60;
-    let s = Math.floor(left);
-    console.log(`${d} , ${h} , ${m} , ${s}`);
-    return (
-      <div className="countdownWrap">
-        <div className="countdown">
-          <div className="comp day">
-            <div className="dhm">{d}</div>
-            <div className="labels">Days</div>
-          </div>
-          <div className="comp hours">
-            <div className="dhm">{h}</div>
-            <div className="labels">Hours</div>
-          </div>
-          <div className="comp mins">
-            <div className="dhm">{m}</div>
-            <div className="labels">Minutes</div>
-          </div>
-          <div className="comp secs">
-            <div className="justsecs">{s}</div>
-            <div className="labels">Seconds</div>
-          </div>
+
+    if (countdown < 1) {
+      return (
+        <div className="countdownWrap">
+          <div className="eventBegin">unicon 2023 has begun!</div>
         </div>
-        <div className="subTitle">Till liftoff!</div>
-      </div>
-    );
-  };
+      );
+    } else {
+      let hourDivider = 60 * 60;
+      let dayDivider = hourDivider * 24;
+
+      let d = Math.floor(countdown / dayDivider);
+
+      let left = countdown - d * dayDivider;
+
+      let h = Math.floor(left / hourDivider);
+
+      left -= h * hourDivider;
+
+      let m = Math.floor(left / 60);
+
+      left -= m * 60;
+
+      let s = Math.floor(left);
+      // console.log(`${d} , ${h} , ${m} , ${s}`);
+      return (
+        <div className="countdownWrap">
+          <div className="countdown">
+            <div className="comp day">
+              <div className="dhm">{d}</div>
+              <div className="labels">Days</div>
+            </div>
+            <div className="comp hours">
+              <div className="dhm">{h}</div>
+              <div className="labels">Hours</div>
+            </div>
+            <div className="comp mins">
+              <div className="dhm">{h}</div>
+              <div className="labels">Minutes</div>
+            </div>
+            <div className="comp secs">
+              <div className="justsecs">{s}</div>
+              <div className="labels">Seconds</div>
+            </div>
+          </div>
+          <div className="subTitle">Till liftoff!</div>
+        </div>
+      );
+      }
+    };
   const resetbkgroundTransforms = (e) => {
     set({ xy: [0, 0] });
   };
