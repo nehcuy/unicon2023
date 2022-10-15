@@ -92,7 +92,7 @@ export default function Home({ win_width, win_height, is_mobile }) {
     let m = Math.floor(left / 60);
     left -= m * 60;
     let s = Math.floor(left);
-    // console.log(`${d} , ${h} , ${m} , ${s}`);
+    console.log(`${d} , ${h} , ${m} , ${s}`);
     return (
       <div className="countdownWrap">
         <div className="countdown">
@@ -105,7 +105,7 @@ export default function Home({ win_width, win_height, is_mobile }) {
             <div className="labels">Hours</div>
           </div>
           <div className="comp mins">
-            <div className="dhm">{h}</div>
+            <div className="dhm">{m}</div>
             <div className="labels">Minutes</div>
           </div>
           <div className="comp secs">
