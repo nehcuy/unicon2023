@@ -17,7 +17,7 @@
 
 .button{
     text-align: center;
-    background-color: $orange-1;
+    background-color: $aqua;
     padding: 4px;
     border-radius: 6px;
     width: 100px;
@@ -28,7 +28,7 @@
     align-items: center;
     justify-content: center;
     &:hover {
-        background-color: lighten($orange-1, 5%);
+        background-color: lighten($logopurple, 5%);
     }
 }
 .frontPanel {
@@ -55,14 +55,14 @@
     .title {
         color: $beige-1;
         font-size: $h1-fs;
-        font-family: 'TwitchyTv';
+        font-family: 'Kat';
         text-align: left;
     }
 
     .subTitle {
-        color: $techie-aqua;
+        color: $aqua;
         font-size: $h2-fs;
-        font-family: 'RaidenShogunTit';
+        font-family: 'Kat';
 
         &.dates {
             color: $beige-1;
@@ -70,9 +70,9 @@
     }
     
     .eventBegin {
-        color: $techie-aqua;
+        color: $aqua;
         font-size: $h2-fs;
-        font-family: 'RaidenShogunTit';
+        font-family: 'Kat';
 
         &.dates {
           color: $beige-1;
@@ -81,7 +81,7 @@
 
     .subText {
         color: $beige-1;
-        font-size: $orange-2;
+        // font-size: $orange-2;
 
     }
 
@@ -104,13 +104,13 @@
         margin-top: 32px;
         color: $orange-1;
         font-size: $h1-5-fs;
-        font-family: 'RaidenShogunTit';
+        font-family: 'Kat';
     }
     .eventBegin {
         margin: auto;
         color: $orange-1;
         font-size: $h1-5-fs;
-        font-family: 'RaidenShogunTit';
+        font-family: 'Kat';
         text-align: center;
     }
     // @media screen and (max-width: 1600px) {

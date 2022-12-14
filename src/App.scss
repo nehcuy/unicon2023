@@ -16,6 +16,11 @@
   src: local('RaidenShogunTit'), url(./fonts/raidercrusadertitle.ttf) format('truetype');
 }
 
+@font-face {
+  font-family: 'Kat';
+  src: local('Kat'), url(./fonts/Kagitingan.ttf) format('truetype');
+}
+
 .App {
   text-align: center;
 }
